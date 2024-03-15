@@ -1,5 +1,6 @@
 # Extension VSCODE HTTP Client
 @baseUrl = http://localhost:3333
+@baseUrlWS = ws://localhost:3333
 
 #create polls
 POST {{baseUrl}}/polls
@@ -21,7 +22,10 @@ POST {{baseUrl}}/polls/4dd0c288-ea84-436e-96fe-f2f9fcc84cf0/votes
 Content-Type: application/json
 
 {
-  "pollOptionId": "ae4173f6-092e-47ec-a46f-61b19818b027"
+  "pollOptionId": "5b628a17-59f2-49ce-b41e-0a81cf3fb6a8"
 }
 
+###
+#poll results
+GET {{baseUrlWS}}/polls/4dd0c288-ea84-436e-96fe-f2f9fcc84cf0/resuls
 ###
