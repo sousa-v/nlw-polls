@@ -1,0 +1,27 @@
+# Extension VSCODE HTTP Client
+@baseUrl = http://localhost:3333
+
+#create polls
+POST {{baseUrl}}/polls
+Content-Type: application/json
+
+{
+  "title": "Qual o melhor ORM",
+  "options": ["PrismaORM", "TypeORM"]
+}
+
+###
+
+#get poll
+GET {{baseUrl}}/polls/4dd0c288-ea84-436e-96fe-f2f9fcc84cf0
+###
+
+#vote on poll
+POST {{baseUrl}}/polls/4dd0c288-ea84-436e-96fe-f2f9fcc84cf0/votes
+Content-Type: application/json
+
+{
+  "pollOptionId": "ae4173f6-092e-47ec-a46f-61b19818b027"
+}
+
+###
